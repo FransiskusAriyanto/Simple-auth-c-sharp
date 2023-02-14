@@ -39,6 +39,7 @@ namespace NewSimpleAuth
         {
 
             id -= 1;
+            var i = 0;
 
             if (id >= users.Count())
             {
@@ -48,7 +49,7 @@ namespace NewSimpleAuth
             {
                 foreach(var user in users)
                 {
-                    if (i == user.Count())
+                    if (i == (users.Count() - 1))
                     {
                         users = null;
                     }
@@ -74,13 +75,20 @@ namespace NewSimpleAuth
 
         public bool Edit(int id, string firstName, string lastName, string password)
         {
-            for (int i = 0; i < this.firstName.Length; i++)
+            foreach (var user in users)
+            {
+                user.firstName = firstName;
+                user.lastName = lastName;
+                user.password = password;
+            }
+            return true;
+            /*for (int i = 0; i < this.firstName.Length; i++)
             {
                 this.firstName[id - 1] = firstName;
                 this.lastName[id - 1] = lastName;
                 this.password[id - 1] = password;
             }
-            return true;
+            return true;*/
         }
     }
 }

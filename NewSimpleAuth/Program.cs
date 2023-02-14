@@ -4,24 +4,36 @@ namespace NewSimpleAuth;
 
 public class Program
 {
+    Model model = new Model();
+    List<User> users = new List<User>();
+
     public static void Main(string[] args)
     {
-        List<User> users = new List<User>();
+
     }
 
-    public void Add(string addFirstName, string addLastName, string addPassword)
-    {
-        FirstName firstName = new FirstName(addFirstName);
-        LastName lastName = new LastName(addLastName);
-        Password password = new Password(addPassword);
-
-
-
+    public void Add(string firstName, string lastName, string password)
+    { 
         model.Add(firstName, lastName, password);
     }
     public void Show()
     {
-        FirstName[] firstName = model.getAllFirstName();
+        var i = 0;
+
+        foreach (var user in users)
+        {
+            if (user.firstName != null)
+            {
+                Console.WriteLine("=========================");
+                Console.WriteLine("ID : " + i++);
+                Console.WriteLine("First Name : " + user.firstName);
+                Console.WriteLine("Last Name : " + user.lastName);
+                Console.WriteLine("User Name : " + user.firstName[0..2] + user.lastName[0..2]);
+                Console.WriteLine("Password: " + user.password);
+                Console.WriteLine("=========================");
+            }
+        }
+        /*FirstName[] firstName = model.getAllFirstName();
         LastName[] lastName = model.getAllLastName();
         Password[] password = model.getAllPassword();
 
@@ -39,7 +51,7 @@ public class Program
                 Console.WriteLine("=========================");
             }
         }
-
+*/
         OtherMenu();
     }
     public void Search()
@@ -48,9 +60,9 @@ public class Program
     }
     public void Login()
     {
-        FirstName[] firstName = model.getAllFirstName();
+/*        FirstName[] firstName = model.getAllFirstName();
         LastName[] lastName = model.getAllLastName();
-        Password[] password = model.getAllPassword();
+        Password[] password = model.getAllPassword();*/
 
         Console.WriteLine("==LOGIN==");
         Console.Write("USERNAME : ");
@@ -58,7 +70,21 @@ public class Program
         Console.Write("PASSWORD: ");
         var inputPassword = Input();
 
-        for (int i = 0; i < firstName.Length; i++)
+        foreach (var user in users)
+        {
+            if (inputUserName == (user.firstName[..2] + user.lastName[..2]) && inputPassword == user.password)
+            {
+                Console.WriteLine("Login Berhasil");
+                Menu();
+            }
+            else
+            {
+                Console.WriteLine("Login Gagal");
+                Menu();
+            }
+        }
+
+        /*for (int i = 0; i < firstName.Length; i++)
         {
             var userName = firstName[i].firstName[0..2] + lastName[i].lastName[0..2];
 
@@ -72,7 +98,7 @@ public class Program
                 Console.WriteLine("Login Gagal");
                 Menu();
             }
-        }
+        }*/
     }
 
     public void Menu()
@@ -195,7 +221,15 @@ public class Program
 
     public void Edit(int id, string firstName, string lastName, string password)
     {
-        FirstName[] setFirstName = model.getAllFirstName();
+
+        foreach (var user in users)
+        {
+            if (users.Count() - 1 != null)
+            {
+                model.Edit(id, user.firstName, user.lastName, user.password);
+            }
+        }
+/*        FirstName[] setFirstName = model.getAllFirstName();
         LastName[] setLastName = model.getAllLastName();
         Password[] setPassword = model.getAllPassword();
 
@@ -208,6 +242,6 @@ public class Program
             {
                 model.Edit(id, a, b, c);
             }
-        }
+        }*/
     }
 }
