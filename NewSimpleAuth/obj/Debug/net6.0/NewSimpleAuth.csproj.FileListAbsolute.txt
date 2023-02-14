@@ -1,0 +1,15 @@
+E:\MCC\NewSimpleAuth\NewSimpleAuth\bin\Debug\net6.0\NewSimpleAuth.exe
+E:\MCC\NewSimpleAuth\NewSimpleAuth\bin\Debug\net6.0\NewSimpleAuth.deps.json
+E:\MCC\NewSimpleAuth\NewSimpleAuth\bin\Debug\net6.0\NewSimpleAuth.runtimeconfig.json
+E:\MCC\NewSimpleAuth\NewSimpleAuth\bin\Debug\net6.0\NewSimpleAuth.dll
+E:\MCC\NewSimpleAuth\NewSimpleAuth\bin\Debug\net6.0\NewSimpleAuth.pdb
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\NewSimpleAuth.csproj.AssemblyReference.cache
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\NewSimpleAuth.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\NewSimpleAuth.AssemblyInfoInputs.cache
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\NewSimpleAuth.AssemblyInfo.cs
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\NewSimpleAuth.csproj.CoreCompileInputs.cache
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\NewSimpleAuth.dll
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\refint\NewSimpleAuth.dll
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\NewSimpleAuth.pdb
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\NewSimpleAuth.genruntimeconfig.cache
+E:\MCC\NewSimpleAuth\NewSimpleAuth\obj\Debug\net6.0\ref\NewSimpleAuth.dll
